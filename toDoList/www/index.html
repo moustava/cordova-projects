@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Tatsk List App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"> -->
+  <!-- <link rel="stylesheet" href="css/index.css"> -->
+  <link rel="stylesheet" href="lib/samatheme.min.css">
+  <link rel="stylesheet" href="lib/jquery.mobile.icons.min.css">
+  <link rel="stylesheet" href="lib/jquery.mobile.structure-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+  <div data-role="page" data-theme="c">
+    <div data-role="header">
+      <h1>Mes tâches</h1>
+    </div>
+
+    <div data-role="main">
+
+      <fieldset>
+        <label for="task"> Add a new task</label>
+        <input type="text" id="task" name="task" />
+      </fieldset>
+      <input type="button" value="Add a task" onclick="addTask()" />
+      <input type="button" value="Reset" onclick="deleteAllTasks()" />
+
+      <h1 class="title" data-role="header">Tâche en cours</h1>
+      <div class="taskList-container">
+        <ul data-inset="true" id="taskList" data-role="listview">
+        </ul>
+      </div>
+
+      <h1 class="title" data-role="header">Tâches terminées</h1>
+      <div class="taskList-container-done">
+        <ul data-inset="true" id="taskList-done" data-role="listview">
+        </ul>
+      </div>
+    </div>
+
+    <div data-role="footer" data-position="fixed" data-theme="b">
+      <h1> DIC3 &copy; right 2024</h1>
+    </div>
+  </div>
+
+
+  </div>
+</body>
+
+</html>

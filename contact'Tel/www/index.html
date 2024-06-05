@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">  
+
+        <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/index.css">
+
+        <script src="lib/jquery.min.js"></script>
+        <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/index.js"></script>
+        <script src="cordova.js"></script>
+        <title>My Contact </title>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header">
+                <h1>Liste des contacts</h1>
+            </div>
+            <div role="main" class="ui-content">
+                <a href="#ajoutContact" data-role="button" data-icon="plus" data-iconpos="right"> Ajouter un contact </a>
+
+                <ul data-role="listview" id="contactList" data-inset="true" data-filter="true" data-filter-placeholder="Rechercher un contact">
+                    
+                </ul>
+            
+            </div>
+            
+            
+            <div data-role="footer" data-position="fixed" >
+                <h1>DIC 3 INFORMATIQUE &copy; 2024</h1>
+            </div>
+        </div>
+        <div data-role="page" id="ajoutContact" >
+          <div data-role="header">
+              <a href="#principale" data-icon="arrow-l" data-rel="back" data-iconpos="notext" data-shadow="false" data-icon-shadow="false">Retour</a>
+              <h1>Ajouter Contact</h1>
+          </div>
+          <div role="main" class="ui-content">
+              <form>
+                  <label for="firstname">Prénom</label>
+                  <input type="text" id="firstname"/>
+                  <label for="lastname">Nom</label>
+                  <input type="text" id="lastname"/>
+                  <label for="numberPhone">Numéro</label>
+                  <input type="tel" id="numberPhone" minlength="9"/> 
+                  <input type="button" value="Annuler" id="backButton" data-inline="true" onclick="window.history.back()">
+                  <input type="button" value="Enregistrer Contact" data-inline="true" onclick="saveContact()">
+              </form>
+          </div>
+
+          <div data-role="footer" data-position="fixed" >
+            <h1>DIC 3 INFORMATIQUE &copy; 2024</h1>
+        </div>
+      </div>
+    </body>
+</html>
